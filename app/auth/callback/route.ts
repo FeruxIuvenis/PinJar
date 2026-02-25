@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
       const forwardedHost = request.headers.get('x-forwarded-host')
       const proto = request.headers.get('x-forwarded-proto')
       const host = forwardedHost || request.headers.get('host')
-      const redirectUrl = proto && host ? `${proto}://${host}/` : '/'
+      const redirectUrl = proto && host ? `${proto}://${host}/` : '/profile'
       return NextResponse.redirect(redirectUrl)
     }
   }

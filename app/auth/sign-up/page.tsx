@@ -88,7 +88,7 @@ export default function SignUpPage() {
 
       if (data?.user) {
         toast.success('Confirmation link sent to your email!')
-        router.push(`/auth/sign-up-success?email=${encodeURIComponent(formData.email)}`)
+        router.push(`/`)
       }
     } catch (err) {
       toast.error('An unexpected error occurred')

@@ -13,7 +13,7 @@ export default async function Home() {
       <main className="container mx-auto px-4 py-12">
         <div className="mb-8">
           <h1 className="text-4xl font-bold tracking-tight text-primary mb-2">
-            Welcome to PinJar, {user.user_metadata?.username || 'User'}!
+            Welcome to PinJar, {user.user_metadata?.username}!
           </h1>
           <p className="text-lg text-muted-foreground">
             Your pin and jar management dashboard will be here soon.
