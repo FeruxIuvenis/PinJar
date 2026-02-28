@@ -1,8 +1,9 @@
+"use client"
 import { redirect } from 'next/navigation'
 import { getCurrentUser } from '@/lib/auth'
 
 export default async function Home() {
-  const user = await getCurrentUser()
+  const { data, user } = await getCurrentUser()
 
   if (!user) {
     redirect('/auth/sign-up')
